@@ -58,7 +58,7 @@
       </style>
       <title>Alerta Vecinal</title>
    </head>
-   <body>
+   <body onload="onLoad()">
       <!-- page 1 -->
       <div data-role="page" id="page1" class="fondoAlerta">
          
@@ -172,11 +172,11 @@
 	  <script type="text/javascript" src="aplicacion.js"></script>
 	  <script language="javascript">
 
-
+/*
         $(document).ready(function() {
-			cargarGPS();
-            revisarGPS();
-        });
+			//cargarGPS();
+            //revisarGPS();
+        });*/
 
 		function revisarGPS()
 		{
@@ -185,7 +185,17 @@
 			},5000);
 		}
 		
-		
+		function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+		// Now safe to use device APIs
+		cargarGPS();
+            revisarGPS();
+    }
     </script>
    </body>
 </html>
