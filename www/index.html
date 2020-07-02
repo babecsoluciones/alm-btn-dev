@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="format-detection" content="telephone=no">
+      <meta name="msapplication-tap-highlight" content="no">
+      <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+      <link rel="stylesheet" type="text/css" href="css/index.css">
+	  <link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+	  
+	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+      <style>
+         /* For avoiding title truncation in wp8 */
+         .ui-header .ui-title {
+         overflow: visible !important;
+         }
+         /* For fixing the absolute position issue for the default cordova gen page*/
+         #cjp-accordion1 .app {
+         left: 5px !important;
+         margin: 5px !important;
+         position: relative !important;
+		 }
+		 .botonSOS
+		 {
+			 margin-top:100px !important;
+			 text-align: center !important;
+			 border-radius: 50% !important;
+			 padding: 25px !important;
+			 width:250px !important;
+			 height:250px !important;
+			 font-size: 54px !important;
+			 background: rgb(129,14,14) !important;
+			 background: linear-gradient(0deg, rgba(129,14,14,1) 0%, rgba(253,29,29,1) 50%, rgba(255,74,74,1) 100%) !important;
+			 color: #FFF !important;
+			 border-style: solid !important;
+			   border-width: 5px !important;
+			   border-color: #878686 !important;
+		 }
+		 .botonCamara
+		 {
+			background: rgb(2,0,36) !important;
+			background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%) !important;
+			color:#FFF !important;
+		 }
+		 .fondoAlerta
+		 {
+			 background-color: maroon !important;
+		 }
+		 .limpio
+		 {
+			 background-color: transparent !important;
+		 }
+		 .tablaBlanca
+		 {
+			 color: #FFF !important;
+			 font-weight: bold;
+		 }
+      </style>
+      <title>Alerta Vecinal</title>
+   </head>
+   <body>
+      <!-- page 1 -->
+      <div data-role="page" id="page1" class="fondoAlerta">
+         
+         <div class="ui-content">
+			 <form id="datos-alerta">
+				<center>
+					<button type="button" class="botonSOS">S.O.S</button>
+					<table width="80%" class="tablaBlanca">
+						<tr>
+							<td align="left">Latitud:</td>
+							<td id="tdLat0" align="right"></td>
+						</tr>
+						<tr>
+							<td align="left">Longitud:</td>
+							<td id="tdLng0" align="right"></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center"><button type="button" class="botonCamara"><i class="fas fa-camera"></i> tomar imagen</button></td>
+						</tr>
+					</table>
+				</center>
+				<input type="hidden" id="tLat0" name="tLatitud">
+				<input type="hidden" id="tLng0" name="tLongitud">
+			</form>
+         </div>
+         <!-- end page 1 content -->
+         <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+               <ul>
+				  <li><a href="#page2"><i class="fas fa-th-list"></i><br>Notificaciones</a></li>
+				  <li><a href="#page1" class="ui-btn-active ui-state-persist"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><br>Alerta</a></li>
+                  <li><a href="#page3"><i class="fas fa-id-card"></i><br>Perfil</a></li>
+               </ul>
+            </div>
+            <!-- /navbar -->
+         </div>
+         <!-- /footer -->
+      </div>
+      <!-- /page1 -->
+      <!-- page 2 -->
+      <div data-role="page" id="page2">
+         <div data-role="header">
+            <h1>&Uacute;ltimas alertas</h1>
+         </div>
+         <div class="ui-content">
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar..." data-inset="true">
+				<li><a href="#">Alerta</a></li>
+				<li><a href="#">Alerta</a></li>
+				<li><a href="#">Alerta</a></li>
+				<li><a href="#">Alerta</a></li>
+				<li><a href="#">Alerta</a></li>
+				<li><a href="#">Alerta</a></li>
+				<li><a href="#">Alerta</a></li>
+				<li><a href="#">Alerta</a></li>
+				<li><a href="#">Alerta</a></li>
+				<li><a href="#">Alerta</a></li>
+			</ul>
+         </div>
+         <!-- end page 2 content -->
+         <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+				<ul>
+					<li><a href="#page2" class="ui-btn-active ui-state-persist"><i class="fas fa-th-list"></i><br>Notificaciones</a></li>
+					<li><a href="#page1"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><br>Alerta</a></li>
+					<li><a href="#page3"><i class="fas fa-id-card"></i><br>Perfil</a></li>
+				 </ul>
+            </div>
+            <!-- /navbar -->
+         </div>
+         <!-- /footer -->
+      </div>
+      <!-- /page2 -->
+      <!-- page 3 -->
+      <div data-role="page" id="page3">
+         <div data-role="header">
+            <h1>Page 3</h1>
+         </div>
+         <div class="ui-content">
+            <p>This is page 3</p>
+         </div>
+         <!-- end page 3 content -->
+         <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+				<ul>
+					<li><a href="#page2"><i class="fas fa-th-list"></i><br>Notificaciones</a></li>
+					<li><a href="#page1"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><br>Alerta</a></li>
+					<li><a href="#page3" class="ui-btn-active ui-state-persist"><i class="fas fa-id-card"></i><br>Perfil</a></li>
+				 </ul>
+            </div>
+            <!-- /navbar -->
+         </div>
+         <!-- /footer -->
+      </div>
+      <!-- /page3 -->
+	  <!--<script type="text/javascript" src="cordova.js"></script>-->
+	  <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
+	  <script type="text/javascript" id="jqm-trans-disable">
+         /* For having a faster transition */
+         $(document).on("mobileinit", function() {
+         		$.mobile.defaultPageTransition = "none";
+         		$.mobile.defaultDialogTransition = "none";
+         });
+	  </script>
+	  <script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
+	  <script type="text/javascript" src="js/index.js"></script>
+	  <script type="text/javascript" src="aplicacion.js"></script>
+	  <script language="javascript">
+        $(document).ready(function() {
+            revisarGPS();
+        });
+
+		function revisarGPS()
+		{
+			setInterval(function(){
+				cargarGPS();
+			},5000);
+		}
+        
+    </script>
+   </body>
+</html>
