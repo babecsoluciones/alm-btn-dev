@@ -172,27 +172,6 @@
 	  <script type="text/javascript" src="aplicacion.js"></script>
 	  <script language="javascript">
 
-		var list = [
-			permissions.CAMERA,
-			permissions.WRITE_EXTERNAL_STORAGE
-		];
-
-		permissions.hasPermission(list,callback,null);
-
-		function error(){
-			console.warn('Se requieren permisos adicionales');
-		}
-
-		function success( status ){
-			if(!status.hasPermission){
-				permissions.requestPermissions(
-					list,
-					function(status){
-						if(!status.hasPermission) error();
-					},
-					error);
-			}
-		}
 
         $(document).ready(function() {
 			cargarGPS();
