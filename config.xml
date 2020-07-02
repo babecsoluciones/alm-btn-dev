@@ -8,6 +8,9 @@
         Apache Cordova Team
     </author>
 
+    <preference name="android-minSdkVersion"      value="14" />
+    <preference name="android-targetSdkVersion"   value="28" />
+
     <content src="index.html" />
     <!--plugins-->
     <plugin name="cordova-plugin-android-permissions" spec="1" />
