@@ -174,9 +174,8 @@
 
 
         $(document).ready(function() {
-			permisos();
-			/*cargarGPS();
-            revisarGPS();*/
+			cargarGPS();
+            revisarGPS();
         });
 
 		function revisarGPS()
@@ -186,32 +185,7 @@
 			},5000);
 		}
 		
-		function permisos()
-		{
-			var list = [
-  			  permissions.CAMERA,
-			  permissions.WRITE_EXTERNAL_STORAGE,
-			  permissions.ACCESS_COARSE_LOCATION
-			];
-
-			permissions.hasPermission(list, callback, null);
-
-			function error() {
-  				console.warn('Camera or Accounts permission is not turned on');
-			}
-
-			function success( status ) {
-  				if( !status.hasPermission ) {
-  
-    				permissions.requestPermissions(
-      				list,
-      				function(status) {
-        			if( !status.hasPermission ) error();
-      				},
-      				error);
-  				}
-			}
-		}
+		
     </script>
    </body>
 </html>
