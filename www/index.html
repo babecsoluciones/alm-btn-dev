@@ -76,10 +76,15 @@
 							<td id="tdLng0" align="right"></td>
 						</tr>
 						<tr>
-							<td colspan="2" align="center"><button type="button" class="botonCamara"><i class="fas fa-camera"></i> tomar imagen</button></td>
+							<td colspan="2">
+							<button class="form-control btn btn-info" onclick="guardarImagen('0')">
+								<i class="icono-menu fas fa-camera"></i> Tomar Imagen
+							</button>
+						</td>
 						</tr>
 					</table>
 				</center>
+				<input type="hidden" id="imgArchivo0" name="fotos[0][tArchivo]">
 				<input type="hidden" id="tLat0" name="tLatitud">
 				<input type="hidden" id="tLng0" name="tLongitud">
 			</form>
@@ -153,7 +158,7 @@
          <!-- /footer -->
       </div>
       <!-- /page3 -->
-	  <!--<script type="text/javascript" src="cordova.js"></script>-->
+	  <script type="text/javascript" src="cordova.js"></script>
 	  <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
 	  <script type="text/javascript" id="jqm-trans-disable">
          /* For having a faster transition */

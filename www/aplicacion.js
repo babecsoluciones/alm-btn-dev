@@ -332,8 +332,8 @@ function guardarImagen(indice)
                 var imagen = "data:image/jpeg;base64," + imageData;
                 document.getElementById('imgArchivo'+indice).value=imagen;
                 indice++;
-                agregarFilaArchivo(indice);
-                window.location="index.html#upd-img";
+                //agregarFilaArchivo(indice);
+                window.location="index.html#page1";
             }
 
             function onFail(message) {
