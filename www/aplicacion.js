@@ -337,7 +337,7 @@ function guardarImagen(indice)
             }
 
             function onFail(message) {
-                alert('Error: ' + message);
+                //alert('Error: ' + message);
             }
 }
 
