@@ -22,6 +22,9 @@
     },
     "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "com.alerta.vecinal"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.alerta.vecinal"
     }
   },
   "dependent_plugins": {}

@@ -61,6 +61,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "merges": [
         "navigator.notification"
       ]
+    },
+    {
+      "id": "cordova-plugin-android-permissions.Permissions",
+      "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+      "pluginId": "cordova-plugin-android-permissions",
+      "clobbers": [
+        "cordova.plugins.permissions"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -68,6 +76,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-camera": "4.1.0",
     "cordova-plugin-geolocation": "4.0.2",
     "cordova-plugin-vibration": "3.1.1",
-    "cordova-plugin-dialogs": "2.0.2"
+    "cordova-plugin-dialogs": "2.0.2",
+    "cordova-plugin-android-permissions": "1.0.2"
   };
 });
